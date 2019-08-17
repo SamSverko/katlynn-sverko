@@ -8,25 +8,39 @@ const hbs = require('express-handlebars');
 app.use('/static', express.static(path.join(__dirname, 'public')));
 
 // view engine
-// https://stackoverflow.com/questions/24730861/what-is-the-difference-between-partial-view-and-layout
-app.set('view engine', 'hbs');
+app.set('view engine', '.hbs');
 
 app.engine( 'hbs', hbs( {
-	extname: 'hbs',
-	defaultView: 'default',
+	defaultLayout: 'index',
+	extname: '.hbs',
 	layoutsDir: __dirname + '/views/layouts/',
 	partialsDir: __dirname + '/views/partials/'
 }));
 
 // routes
 app.get('/', (req, res) => {
-	res.render('home', {layout: 'second', template: 'home-template'}); // no idea 'template: 'home-template'' does
+	res.render('index', {
+		layout: 'main',
+		title: 'Home'
+	});
 });
 
-app.post('/', (req, res) => {
-	res.send('Got a POST request for \'/\'.');
+app.get('/work', (req, res) => {
+	res.render('work', {
+		layout: 'main',
+		title: 'Work'
+	});
 });
 
+app.get('/secret', (req, res) => {
+	res.send('You found the secret.', 418);
+});
+
+app.get('*', (req, res) => {
+	res.send('Are you lost?', 404);
+});
+
+// turn app listening on
 app.listen(PORT, () => {
 	console.log(`App listening on port ${PORT}.`);
 });
