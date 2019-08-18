@@ -33,11 +33,11 @@ app.get('/work', (req, res) => {
 });
 
 app.get('/secret', (req, res) => {
-	res.send('You found the secret.', 418);
+	res.status(418).send('You found the secret.');
 });
 
 app.get('*', (req, res) => {
-	res.send('Are you lost?', 404);
+	res.status(404).send('Are you lost?');
 });
 
 // turn app listening on
