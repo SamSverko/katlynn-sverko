@@ -29,6 +29,17 @@ app.engine( 'hbs', hbs( {
 // routes
 app.use('/', router);
 
+// server error handler
+app.use((err, req, res, next) => {
+	console.log(err.stack);
+
+	res.status(500)
+	.render('error-server', {
+		layout: 'main',
+		title: 'Server Error'
+	});
+});
+
 // turn app listening on
 app.listen(PORT, () => {
 	console.log(`App listening on port ${PORT}.`);
