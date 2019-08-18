@@ -1,6 +1,9 @@
 <p>Footer.</p>
 
+{{!!-- output only if script exists --}}
+{{#if script}}
 <script type="text/javascript" src="/static/scripts/{{ script }}.js"></script>
+{{/if}}
 
 </body>
 </html>
