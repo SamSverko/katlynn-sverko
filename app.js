@@ -21,7 +21,8 @@ app.engine( 'hbs', hbs( {
 app.get('/', (req, res) => {
 	res.render('index', {
 		layout: 'main',
-		title: 'Home'
+		script: 'index',
+		title: 'Home',
 	});
 });
 
