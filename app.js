@@ -3,10 +3,15 @@ const express = require('express');
 const app = express();
 const PORT = 8080;
 const path = require('path');
+// helmet
+const helmet = require('helmet');
 // handlebars
 const hbs = require('express-handlebars');
 // router
 const router = require('./routes');
+
+// helmet
+app.use(helmet());
 
 // static files
 app.use('/static', express.static(path.join(__dirname, 'public')));
