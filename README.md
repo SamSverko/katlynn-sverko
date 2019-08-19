@@ -6,7 +6,27 @@ Coming soon.
 
 ---
 
-## Development resources
+## Development
+
+### Ensure Google Firebase is installed and logged in
+
+* Run `npm install -g firebase-tools` (you may need to preface this with `sudo`).
+
+* Run `firebase login`.
+
+### Update dependencies
+
+* Project-wide: In `/` run `npm i`.
+
+* Google Firebase functions: In `/functions` run `npm i`.
+
+### Start server for development
+
+* Run `firebase serve --only hosting,functions`.
+
+---
+
+## Resources
 
 This contains a list of tools, languages, and other resources used in the development of this website.
 
