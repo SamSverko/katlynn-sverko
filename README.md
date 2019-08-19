@@ -26,7 +26,7 @@ Coming soon.
 
 ### Deploy
 
-* Run `firebase deploy`.
+* Run `firebase deploy -m "Optional deploy message."`.
 
 ---
 
