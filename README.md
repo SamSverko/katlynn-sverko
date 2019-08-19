@@ -24,6 +24,10 @@ Coming soon.
 
 * Run `firebase serve --only hosting,functions`.
 
+### Deploy
+
+* Run `firebase deploy`.
+
 ---
 
 ## Resources
