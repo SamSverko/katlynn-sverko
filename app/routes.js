@@ -1,12 +1,6 @@
 const express = require('express');
 const router = express.Router();
 
-// firebase route example with caching
-// app.get('/', (request, response) => {
-// 	response.set('Cache-Control', 'public, max-age=300, s-maxage=600');
-// 	response.send(`${Date.now()}`);
-// });
-
 // home page
 router.get('/', (req, res) => {
 	res.render('index', {

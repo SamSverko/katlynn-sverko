@@ -8,25 +8,18 @@ Coming soon.
 
 ## Development
 
-### Ensure Google Firebase is installed and logged in
-
-* Run `npm install -g firebase-tools` (you may need to preface this with `sudo`).
-
-* Run `firebase login`.
-
 ### Update dependencies
 
-* Project-wide: In `/` run `npm i`.
-
-* Google Firebase functions: In `/functions` run `npm i`.
+* Run `npm i`.
 
 ### Start server for development
 
-* Run `firebase serve --only hosting,functions`.
+* Run `npm run start-dev`.
+* View locally at [http://localhost:3000](http://localhost:3000).
 
 ### Deploy
 
-* Run `firebase deploy -m "Optional deploy message."`.
+* We're not quite there yet...
 
 ---
 
