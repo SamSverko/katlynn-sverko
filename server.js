@@ -33,7 +33,7 @@ app.use('/', router);
 
 // server error handler
 app.use((err, req, res, next) => {
-	console.log(err.stack);
+	console.error(err);
 
 	res.status(500).render('error-server', {
 		layout: 'main',
@@ -43,5 +43,5 @@ app.use((err, req, res, next) => {
 
 // turn app listening on
 app.listen(PORT, () => {
-	console.log(`App listening on at http://localhost:${PORT}.`);
+	console.log(`Server successfully started and listening at http://localhost:${PORT}.`);
 });

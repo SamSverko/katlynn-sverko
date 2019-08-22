@@ -3,15 +3,19 @@ const router = express.Router();
 
 // home page
 router.get('/', (req, res) => {
+	console.log('GET request for \'/\'.');
+
 	res.render('index', {
 		layout: 'main',
 		script: 'index',
-		title: 'Home'
+		title: 'Hey'
 	});
 });
 
 // work page
 router.get('/work', (req, res) => {
+	console.log('GET request for \'/work\'.');
+
 	res.render('work', {
 		layout: 'main',
 		title: 'Work'
@@ -20,6 +24,8 @@ router.get('/work', (req, res) => {
 
 // secret page
 router.get('/secret', (req, res) => {
+	console.log('GET request for \'/secret\'.');
+
 	res.status(418)
 	.render('secret', {
 		layout: 'main',
@@ -34,6 +40,8 @@ router.get('/err', (req, res) => {
 
 // 404 handler
 router.get('*', (req, res) => {
+	console.log('GET request for \'404\'.');
+
 	res.status(404)
 	.render('error-404', {
 		layout: 'main',

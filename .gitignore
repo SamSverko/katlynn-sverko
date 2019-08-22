@@ -1,5 +1,6 @@
-# Dependencies
+# Folders
+logs
 node_modules
 
-# System files
+# Files
 .DS_Store
