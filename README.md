@@ -16,16 +16,16 @@ Coming soon.
 
 #### Start the server
 
-* Run `npm run dev-start`.
+* Run `npm run dev-start` (starts a new pm2 process named 'katlynn-sverko').
 * View locally at [http://localhost:3000](http://localhost:3000).
 
 #### Stop the server
 
-* Run `npm run dev-stop`.
+* Run `npm run dev-stop` (stops the 'katlynn-sverko' pm2 process).
 
 #### Delete pm2 process
 
-* Run `npm run dev-delete`.
+* Run `npm run dev-delete` (deletes the 'katlynn-sverko' pm2 process).
 
 ---
 
