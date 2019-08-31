@@ -1,6 +1,5 @@
-// express
+// dependencies
 const express = require('express');
-// express router
 const router = express.Router();
 
 // home page
@@ -9,8 +8,9 @@ router.get('/', (req, res) => {
 
 	res.render('index', {
 		layout: 'main',
+		style: 'index',
 		script: 'index',
-		title: 'Hey'
+		title: 'Home'
 	});
 });
 

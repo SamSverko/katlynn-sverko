@@ -51,6 +51,7 @@ This contains a list of dependencies, languages, and other resources used in the
 
 #### Dependencies
 
+* [dotenv](https://www.npmjs.com/package/dotenv) - A module that loads environment variables from a `.env` file.
 * [express](https://www.npmjs.com/package/express) - A fast, unopinionated, minimalist web framework for Node.js.
 * [express-handlebars](https://www.npmjs.com/package/express-handlebars) - A view engine responsible for rendering view files into html form to the browser.
 * [helmet](https://www.npmjs.com/package/helmet) - A collection of smaller middleware functions that set security-related HTTP response headers.

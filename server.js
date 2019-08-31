@@ -1,14 +1,14 @@
 // node
 const path = require('path');
-// express
+// dependencies
+const dotenv = require('dotenv').config();
 const express = require('express');
-const PORT = 3000;
+const HOST = process.env.APP_HOST;
+const PORT = process.env.APP_PORT;
 const app = express();
-// helmet - express security dependency
 const helmet = require('helmet');
-// express-handlebars - express view engine
 const hbs = require('express-handlebars');
-// router
+// local files
 const router = require(path.join(__dirname, 'app/routes'));
 
 // helmet
@@ -20,7 +20,6 @@ app.use('/static', express.static(path.join(__dirname, 'app/public')));
 // view engine
 app.set('view engine', '.hbs');
 app.set('views', path.join(__dirname, 'app/views'));
-
 app.engine('hbs', hbs({
 	defaultLayout: 'main',
 	extname: '.hbs',
@@ -43,5 +42,5 @@ app.use((err, req, res, next) => {
 
 // turn app listening on
 app.listen(PORT, () => {
-	console.log(`Server successfully started and listening at http://localhost:${PORT}.`);
+	console.log(`Server successfully started and listening at ${HOST}:${PORT}.`);
 });
