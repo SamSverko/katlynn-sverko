@@ -49,6 +49,6 @@ router.get('*', (req, res) => {
 		layout: 'main',
 		title: '404'
 	});
-})
+});
 
 module.exports = router;
