@@ -1,1 +1,1 @@
-console.log('Welcome to the index page!');
+console.info('index.js loaded.');

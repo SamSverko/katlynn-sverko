@@ -1,6 +1,18 @@
-console.log('Global script ready.');
+console.info('global.js loaded.');
 
-document.querySelector('.nav-bar__hamburger').addEventListener('click', (event) => {
+// SITEWIDE ============================================================
+function sendEmail() {
+	window.location = 'mailto:ksverko@ryerson.ca';
+}
+
+function scrollToElement(elementId) {
+	document.getElementById(elementId).scrollIntoView({
+		behavior: 'smooth'
+	});
+}
+
+// PARTIAL | NAV BAR ===================================================
+function toggleNavBarLinks() {
 	const navBarElement = document.querySelector('.nav-bar-links');
 	if (window.getComputedStyle(navBarElement).display == 'none') {
 		navBarElement.classList.remove('animation-fade-out');
@@ -13,4 +25,4 @@ document.querySelector('.nav-bar__hamburger').addEventListener('click', (event) 
 			navBarElement.style.display = 'none';
 		}, 500);
 	}
-});
+}

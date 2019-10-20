@@ -4,9 +4,11 @@
 	"description": "Website portfolio for Katlynn Sverko.",
 	"main": "server.js",
 	"scripts": {
+		"build-css": "sass app/public/styles/sass:app/public/styles",
 		"start": "pm2 start ecosystem.config.js --only katlynn-sverko && sass app/public/styles/sass:app/public/styles",
 		"start-dev": "pm2 start ecosystem.config.js --only katlynn-sverko-dev --watch && sass --watch app/public/styles/sass:app/public/styles",
-		"stop": "pm2 stop ecosystem.config.js"
+		"stop": "pm2 stop ecosystem.config.js",
+		"watch-css": "sass --watch app/public/styles/sass:app/public/styles"
 	},
 	"author": "Sam Sverko",
 	"license": "ISC",

@@ -1,5 +1,144 @@
-h1 {
-  font-family: var(--font-title);
+.meet-katlynn {
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  min-height: calc(100vh - 65px);
+}
+@media only screen and (max-width: 420px) {
+  .meet-katlynn {
+    min-height: calc(80vh - 65px);
+  }
+}
+.meet-katlynn .meet-katlynn__left {
+  background-color: white;
+  background-image: url("/static/images/index/katlynn-bookshelf-reading.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 50%;
+}
+@media only screen and (max-width: 767px) {
+  .meet-katlynn .meet-katlynn__left {
+    min-height: calc(80vh - 65px);
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 420px) {
+  .meet-katlynn .meet-katlynn__left {
+    display: none;
+  }
+}
+.meet-katlynn .meet-katlynn__right {
+  align-items: flex-start;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px;
+  text-align: left;
+  width: 50%;
+}
+@media only screen and (max-width: 767px) {
+  .meet-katlynn .meet-katlynn__right {
+    padding: 40px;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 420px) {
+  .meet-katlynn .meet-katlynn__right {
+    padding: 20px;
+  }
+}
+.meet-katlynn .meet-katlynn__right button {
+  background-color: white;
+  border: 1px solid #656262;
+  -webkit-box-shadow: 0px 5px 5px 0px #bababa;
+  -moz-box-shadow: 0px 5px 5px 0px #bababa;
+  box-shadow: 0px 5px 5px 0px #bababa;
+  color: #656262;
+  font-size: 1.25em;
+  height: 50px;
+  text-transform: uppercase;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  width: 200px;
+}
+.meet-katlynn .meet-katlynn__right button:hover {
+  color: #020202;
+  background-color: #ff99cc;
+  cursor: pointer;
+}
+.meet-katlynn .meet-katlynn__right h1 {
+  font-size: 2.5em;
+  margin: 0 0 20px 0;
+  text-transform: uppercase;
+}
+.meet-katlynn .meet-katlynn__right p {
+  color: #656262;
+  margin: 0 0 20px 0;
+}
+.meet-katlynn .meet-katlynn__right .meet-katlynn__right__social {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  margin: 20px 0 0 0;
+  width: 100%;
+}
+.meet-katlynn .meet-katlynn__right .meet-katlynn__right__social a {
+  align-items: center;
+  border: 1px solid #656262;
+  display: flex;
+  flex-direction: row;
+  margin: 0 20px 0 0;
+  padding: 10px;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+.meet-katlynn .meet-katlynn__right .meet-katlynn__right__social a:hover {
+  background-color: #ff99cc;
+  cursor: pointer;
+}
+.meet-katlynn .meet-katlynn__right .meet-katlynn__right__social a img {
+  box-sizing: border-box;
+  height: 15px;
+  width: 15px;
+}
+.meet-katlynn .meet-katlynn__scroll-down {
+  align-items: center;
+  background-color: #ff99cc;
+  -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.75);
+  bottom: 10px;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  left: calc(50% - 25px);
+  position: absolute;
+  width: 50px;
+  z-index: 99;
+}
+.meet-katlynn .meet-katlynn__scroll-down:hover {
+  cursor: pointer;
+}
+.meet-katlynn .meet-katlynn__scroll-down img {
+  height: auto;
+  width: 50%;
+}
+@media only screen and (max-width: 767px) {
+  .meet-katlynn .meet-katlynn__scroll-down {
+    display: none;
+  }
+}
+
+.work-grid {
+  background-color: red;
+  height: 50vh;
 }
 
 /*# sourceMappingURL=index.css.map */
