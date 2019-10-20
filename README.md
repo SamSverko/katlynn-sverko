@@ -1,37 +1,31 @@
 # katlynn-sverko
 
-Website portfolio for Katlynn Sverko.
-
-Coming soon.
+Website portfolio for Katlynn Sverko. Coming soon.
 
 ---
 
-## Develop
+## Setup
 
-### Update dependencies
-
-* Run `npm i`.
-
-### Server services
-
-#### Start the server
-
-* Run `npm run dev-start` (starts a new pm2 process named 'katlynn-sverko').
-* View locally at [http://localhost:3000](http://localhost:3000).
-
-#### Stop the server
-
-* Run `npm run dev-stop` (stops the 'katlynn-sverko' pm2 process).
-
-#### Delete pm2 process
-
-* Run `npm run dev-delete` (deletes the 'katlynn-sverko' pm2 process).
+* Clone repository, run `git clone https://github.com/SamSverko/katlynn-sverko.git`.
+* Install global dependencies, run `npm i -g pm2 sass`.
+* Install local dependencies, run `npm i`.
+* Edit and save `sample.env` as `.env` with appropriate values.
 
 ---
 
-## Deploy
+### Development
 
-* We're not quite there yet...
+* Follow setup section above.
+* Start the local server, run `npm run start-dev` (starts a new pm2 process named 'katlynn-sverko-dev').
+* View locally at [http://localhost](http://localhost) (or whatever host:port matches your `.env` file).
+* Stop the local server, run `npm run stop` (stops all pm2 processes).
+
+---
+
+### Deployment
+
+* Follow setup section above.
+* Start the local server, run `npm run start` (starts a new pm2 process named 'katlynn-sverko').
 
 ---
 
@@ -51,11 +45,17 @@ This contains a list of dependencies, languages, and other resources used in the
 
 #### Dependencies
 
+##### Global
+
+* [pm2](https://www.npmjs.com/package/pm2) - An advanced production process manager for Node.js.
+* [sass](https://www.npmjs.com/package/sass) - A pure JavaScript implementation of Sass.
+
+##### Local
+
 * [dotenv](https://www.npmjs.com/package/dotenv) - A module that loads environment variables from a `.env` file.
 * [express](https://www.npmjs.com/package/express) - A fast, unopinionated, minimalist web framework for Node.js.
 * [express-handlebars](https://www.npmjs.com/package/express-handlebars) - A view engine responsible for rendering view files into html form to the browser.
 * [helmet](https://www.npmjs.com/package/helmet) - A collection of smaller middleware functions that set security-related HTTP response headers.
-* [pm2](https://www.npmjs.com/package/pm2) - An advanced production process manager for Node.js.
 
 ---
 
