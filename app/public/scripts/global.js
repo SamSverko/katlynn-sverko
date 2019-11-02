@@ -1,8 +1,6 @@
 console.info('global.js loaded.');
 
 // SITEWIDE ============================================================
-
-
 function sendEmail() {
 	window.location = 'mailto:ksverko@ryerson.ca';
 }
@@ -13,6 +11,7 @@ function scrollToElement(elementId) {
 	});
 }
 
+
 // PARTIAL | NAV BAR ===================================================
 function toggleNavBarLinks() {
 	const navBarElement = document.querySelector('.nav-bar-links');
@@ -20,14 +19,17 @@ function toggleNavBarLinks() {
 		navBarElement.classList.remove('animation-fade-out');
 		navBarElement.classList.add('animation-fade-in');
 		navBarElement.style.display = 'flex';
+
 	} else {
 		navBarElement.classList.remove('animation-fade-in');
 		navBarElement.classList.add('animation-fade-out');
+
 		setTimeout(() => {
 			navBarElement.style.display = 'none';
 		}, 500);
 	}
 }
+
 
 // PARTIAL | FOOTER ====================================================
 function displayCurrentDate() {

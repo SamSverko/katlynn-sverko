@@ -116,9 +116,21 @@
 		background-size: cover;
 		box-sizing: border-box;
 		height: 500px;
-		width: 33.33%;
+		width: 25%;
 		&:hover .work__item__focus {
 			opacity: 1;
+		}
+		&:last-child {
+			display: none;
+			@media only screen and (max-width: $breakpoint-l) {
+				display: block;
+			}
+			@media only screen and (max-width: $breakpoint-s) {
+				display: none;
+			}
+			@media only screen and (max-width: $breakpoint-xxs) {
+				display: block;
+			}
 		}
 		a {
 			cursor: pointer;
@@ -142,7 +154,9 @@
 					width: 20px;
 				}
 				p {
+					background-color: rgba(0, 0, 0, 0.5);
 					border: 1px solid $color-pink;
+					color: $color-white;
 					margin: 40px 0 0 0;
 					padding: 5px 10px;
 					text-transform: uppercase;
@@ -159,6 +173,9 @@
 					text-transform: uppercase;
 				}
 			}
+		}
+		@media only screen and (max-width: $breakpoint-l) {
+			width: 33.33%;
 		}
 		@media only screen and (max-width: $breakpoint-s) {
 			width: 50%;

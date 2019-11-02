@@ -78,7 +78,7 @@
   transition: all 0.2s ease-in;
 }
 .meet-katlynn .meet-katlynn__right .meet-katlynn__right__social a:hover {
-  background-color: #ff99cc;
+  background-color: #F691B2;
   cursor: pointer;
 }
 .meet-katlynn .meet-katlynn__right .meet-katlynn__right__social a img {
@@ -88,7 +88,7 @@
 }
 .meet-katlynn .meet-katlynn__scroll-down {
   align-items: center;
-  background-color: #ff99cc;
+  background-color: #F691B2;
   -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.75);
@@ -127,10 +127,28 @@
   background-size: cover;
   box-sizing: border-box;
   height: 500px;
-  width: 33.33%;
+  width: 25%;
 }
 .work .work__item:hover .work__item__focus {
   opacity: 1;
+}
+.work .work__item:last-child {
+  display: none;
+}
+@media only screen and (max-width: 1200px) {
+  .work .work__item:last-child {
+    display: block;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .work .work__item:last-child {
+    display: none;
+  }
+}
+@media only screen and (max-width: 420px) {
+  .work .work__item:last-child {
+    display: block;
+  }
 }
 .work .work__item a {
   cursor: pointer;
@@ -150,13 +168,15 @@
   justify-content: flex-start;
 }
 .work .work__item a .work__item__tags div {
-  background-color: #ff99cc;
+  background-color: #F691B2;
   height: 5px;
   margin: 0 20px 0 0;
   width: 20px;
 }
 .work .work__item a .work__item__tags p {
-  border: 1px solid #ff99cc;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid #F691B2;
+  color: white;
   margin: 40px 0 0 0;
   padding: 5px 10px;
   text-transform: uppercase;
@@ -171,6 +191,11 @@
   font-size: 1.5em;
   margin: 0 0 10px 0;
   text-transform: uppercase;
+}
+@media only screen and (max-width: 1200px) {
+  .work .work__item {
+    width: 33.33%;
+  }
 }
 @media only screen and (max-width: 767px) {
   .work .work__item {

@@ -23,7 +23,7 @@ button {
   -webkit-box-shadow: 0px 5px 5px 0px #bababa;
   -moz-box-shadow: 0px 5px 5px 0px #bababa;
   box-shadow: 0px 5px 5px 0px #bababa;
-  color: #656262;
+  color: #020202;
   font-family: "lato", sans-serif;
   font-size: 1.25em;
   height: 50px;
@@ -36,7 +36,7 @@ button {
 }
 button:hover {
   color: #020202;
-  background-color: #ff99cc;
+  background-color: #F691B2;
   cursor: pointer;
 }
 
@@ -185,12 +185,16 @@ p {
 
 .nav-bar {
   align-items: center;
-  background-color: #b9b9b9;
+  background-color: white;
+  border-bottom: 2px solid #F691B2;
+  box-sizing: border-box;
   display: flex;
   font-family: var(--font-title);
   height: 65px;
   justify-content: space-between;
   text-transform: uppercase;
+  width: 100%;
+  z-index: 999;
 }
 .nav-bar div {
   align-items: center;
@@ -206,7 +210,7 @@ p {
   width: auto;
 }
 .nav-bar .nav-bar__title {
-  color: #656262;
+  color: #020202;
   text-align: center;
 }
 .nav-bar .nav-bar__hamburger {
@@ -218,7 +222,7 @@ p {
   width: 70px;
 }
 .nav-bar .nav-bar__hamburger div {
-  background-color: #656262;
+  background-color: #F691B2;
   height: 3px;
   width: 35px;
   margin: 4px 0;
@@ -228,12 +232,14 @@ p {
   align-items: center;
   background-color: white;
   display: none;
-  height: calc(100vh - $height-nav-bar);
+  height: calc(100vh - 65px);
   justify-content: center;
   left: 0;
+  overflow: hidden;
   position: absolute;
   top: 65px;
   width: 100vw;
+  z-index: 999;
 }
 .nav-bar-links ul {
   align-items: flex-start;
@@ -271,7 +277,7 @@ p {
 
 footer {
   align-items: center;
-  background-color: #b9b9b9;
+  background-color: #F691B2;
   box-sizing: border-box;
   bottom: 0;
   display: flex;
@@ -283,7 +289,7 @@ footer {
   width: 100%;
 }
 footer a {
-  color: #656262;
+  color: #020202;
   text-decoration: none;
 }
 footer img {
@@ -292,7 +298,7 @@ footer img {
   width: 50px;
 }
 footer p {
-  color: #656262;
+  color: #020202;
   font-size: 0.8em;
   margin: 0;
 }
