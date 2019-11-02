@@ -1,6 +1,8 @@
 console.info('global.js loaded.');
 
 // SITEWIDE ============================================================
+
+
 function sendEmail() {
 	window.location = 'mailto:ksverko@ryerson.ca';
 }
@@ -26,3 +28,10 @@ function toggleNavBarLinks() {
 		}, 500);
 	}
 }
+
+// PARTIAL | FOOTER ====================================================
+function displayCurrentDate() {
+	document.getElementById('footer__year').innerHTML = new Date().getFullYear();
+}
+
+displayCurrentDate();
