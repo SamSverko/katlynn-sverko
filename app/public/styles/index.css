@@ -77,6 +77,7 @@
   text-transform: uppercase;
 }
 .meet-katlynn .meet-katlynn__right p {
+  font-size: 1em;
   color: #656262;
   margin: 0 0 20px 0;
 }
@@ -137,8 +138,73 @@
 }
 
 .work-grid {
-  background-color: red;
-  height: 50vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.work-grid .work-grid__item {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/images/index/portfolio-myth.png");
+  background-color: white;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
+  height: 500px;
+  width: 33.33%;
+}
+.work-grid .work-grid__item:hover .work-grid__item__focus {
+  opacity: 1;
+}
+.work-grid .work-grid__item a {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  text-decoration: none;
+}
+.work-grid .work-grid__item a p {
+  color: white;
+  margin: 0;
+}
+.work-grid .work-grid__item a .work-grid__item__tags {
+  align-items: flex-end;
+  display: flex;
+  justify-content: flex-start;
+}
+.work-grid .work-grid__item a .work-grid__item__tags div {
+  background-color: #ff99cc;
+  height: 5px;
+  margin: 0 20px 0 0;
+  width: 20px;
+}
+.work-grid .work-grid__item a .work-grid__item__tags p {
+  border: 1px solid #ff99cc;
+  margin: 40px 0 0 0;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  width: 70%;
+}
+.work-grid .work-grid__item a .work-grid__item__focus {
+  opacity: 0;
+  padding: 40px;
+}
+.work-grid .work-grid__item a .work-grid__item__focus .work-grid__item__focus__title {
+  font-family: "montserrat", sans-serif;
+  font-size: 1.5em;
+  margin: 0 0 10px 0;
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 767px) {
+  .work-grid .work-grid__item {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 420px) {
+  .work-grid .work-grid__item {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

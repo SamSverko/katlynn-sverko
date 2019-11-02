@@ -1,4 +1,4 @@
-@import './variables.scss';
+@import '_variables';
 
 .meet-katlynn {
 	padding: 0;
@@ -47,7 +47,7 @@
 			-moz-box-shadow: 0px 5px 5px 0px rgba(186, 186, 186, 1);
 			box-shadow: 0px 5px 5px 0px rgba(186, 186, 186, 1);
 			color: $color-grey-dark;
-			font-size: 1.25em;
+			font-size: $font-size-button;
 			height: 50px;
 			text-transform: uppercase;
 			-moz-transition: all 0.2s ease-in;
@@ -67,6 +67,7 @@
 			text-transform: uppercase;
 		}
 		p {
+			font-size: $font-size-text;
 			color: $color-grey-dark;
 			margin: 0 0 20px 0;
 		}
@@ -127,6 +128,67 @@
 }
 
 .work-grid {
-	background-color: red;
-	height: 50vh
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	.work-grid__item {
+		background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/static/images/index/portfolio-myth.png');
+		background-color: $color-white;
+		background-position: top;
+		background-repeat: no-repeat;
+		background-size: cover;
+		box-sizing: border-box;
+		height: 500px;
+		width: 33.33%;
+		&:hover .work-grid__item__focus {
+			opacity: 1;
+		}
+		a {
+			cursor: pointer;
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+			justify-content: space-between;
+			text-decoration: none;
+			p {
+				color: $color-white;
+				margin: 0;
+			}
+			.work-grid__item__tags {
+				align-items: flex-end;
+				display: flex;
+				justify-content: flex-start;
+				div {
+					background-color: $color-pink;
+					height: 5px;
+					margin: 0 20px 0 0;
+					width: 20px;
+				}
+				p {
+					border: 1px solid $color-pink;
+					margin: 40px 0 0 0;
+					padding: 5px 10px;
+					text-transform: uppercase;
+					width: 70%;
+				}
+			}
+			.work-grid__item__focus {
+				opacity: 0;
+				padding: 40px;
+				.work-grid__item__focus__title {
+					font-family: $font-title;
+					font-size: 1.5em;
+					margin: 0 0 10px 0;
+					text-transform: uppercase;
+				}
+			}
+		}
+		@media only screen and (max-width: $breakpoint-s) {
+			width: 50%;
+		}
+		@media only screen and (max-width: $breakpoint-xxs) {
+			width: 100%;
+		}
+	}
 }
