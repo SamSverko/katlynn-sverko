@@ -58,6 +58,15 @@ p {
   line-height: 1.5em;
 }
 
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 100px;
+}
+
 .animation-fade-in {
   -webkit-animation: fadeIn 0.5s;
   /* Safari, Chrome and Opera > 12.1 */
@@ -260,10 +269,14 @@ p {
   text-decoration: none;
 }
 
-.footer {
+footer {
   background-color: #b9b9b9;
+  bottom: 0;
+  height: 100px;
+  position: absolute;
+  width: 100%;
 }
-.footer p {
+footer p {
   margin: 0;
 }
 

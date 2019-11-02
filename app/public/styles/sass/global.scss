@@ -73,6 +73,15 @@ p {
 	line-height: 1.5em;
 }
 
+#page-container {
+	position: relative;
+	min-height: 100vh;
+}
+
+#content-wrap {
+	padding-bottom: $height-footer;
+}
+
 .animation-fade-in {
 	-webkit-animation: fadeIn 0.5s; /* Safari, Chrome and Opera > 12.1 */
 	-moz-animation: fadeIn 0.5s; /* Firefox < 16 */
@@ -234,8 +243,12 @@ p {
 
 
 // PARTIAL | FOOTER ====================================================
-.footer {
+footer {
 	background-color: $color-grey;
+	bottom: 0;
+	height: $height-footer;
+	position: absolute;
+	width: 100%;
 	p {
 		margin: 0;
 	}
