@@ -182,17 +182,12 @@ p {
 		text-align: center;
 	}
 	.nav-bar__hamburger {
-		align-items: center;
-		cursor: pointer;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
 		width: 70px;
-		div {
-			background-color: $color-pink;
-			height: 3px;
-			width: 35px;
-			margin: 4px 0;
+		.hamburger {
+			box-shadow: none;
+			&:hover {
+				background-color: $color-white;
+			}
 		}
 	}
 }

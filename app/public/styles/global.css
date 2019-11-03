@@ -214,18 +214,13 @@ p {
   text-align: center;
 }
 .nav-bar .nav-bar__hamburger {
-  align-items: center;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   width: 70px;
 }
-.nav-bar .nav-bar__hamburger div {
-  background-color: #F691B2;
-  height: 3px;
-  width: 35px;
-  margin: 4px 0;
+.nav-bar .nav-bar__hamburger .hamburger {
+  box-shadow: none;
+}
+.nav-bar .nav-bar__hamburger .hamburger:hover {
+  background-color: white;
 }
 
 .nav-bar-links {
