@@ -279,6 +279,10 @@ p {
   font-weight: bold;
 }
 
+.font-style--italic {
+  font-style: italic;
+}
+
 .nav-bar {
   align-items: center;
   background-color: white;

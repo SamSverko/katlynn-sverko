@@ -2,9 +2,9 @@
 const path = require('path');
 // dependencies
 const dotenv = require('dotenv').config();
-const express = require('express');
 const HOST = process.env.APP_HOST;
 const PORT = process.env.APP_PORT;
+const express = require('express');
 const app = express();
 const helmet = require('helmet');
 const hbs = require('express-handlebars');

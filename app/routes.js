@@ -2,9 +2,8 @@
 const express = require('express');
 const router = express.Router();
 
-// home page
 router.get('/', (req, res) => {
-	console.log('GET request for \'/\'.');
+	console.log(`GET request for /.`);
 
 	res.render('index', {
 		layout: 'main',
@@ -14,9 +13,8 @@ router.get('/', (req, res) => {
 	});
 });
 
-// work page
 router.get('/work', (req, res) => {
-	console.log('GET request for \'/work\'.');
+	console.log('GET request for /work.');
 
 	res.render('work', {
 		layout: 'main',
@@ -24,9 +22,19 @@ router.get('/work', (req, res) => {
 	});
 });
 
-// secret page
+router.get('/about', (req, res) => {
+	console.log('GET request for /about.');
+
+	res.render('about', {
+		layout: 'main',
+		style: 'about',
+		script: 'about',
+		title: 'About'
+	});
+});
+
 router.get('/secret', (req, res) => {
-	console.log('GET request for \'/secret\'.');
+	console.log('GET request for /secret.');
 
 	res.status(418)
 	.render('secret', {
@@ -42,7 +50,7 @@ router.get('/err', (req, res) => {
 
 // 404 handler
 router.get('*', (req, res) => {
-	console.log('GET request for \'404\'.');
+	console.log('GET request for 404.');
 
 	res.status(404)
 	.render('error-404', {

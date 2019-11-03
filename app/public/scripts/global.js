@@ -2,7 +2,8 @@ console.info('global.js loaded.');
 
 // SITEWIDE ============================================================
 function sendEmail() {
-	window.location = 'mailto:ksverko@ryerson.ca';
+	// window.location = 'mailto:ksverko@ryerson.ca';
+	window.location = '/contact';
 }
 
 function scrollToElement(elementId) {

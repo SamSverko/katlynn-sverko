@@ -1,0 +1,93 @@
+@import '_variables';
+
+.meet-katlynn {
+	padding: 0;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	min-height: calc(100vh - 65px);
+	@media only screen and (max-width: $breakpoint-xxs) {
+		min-height: calc(80vh - 65px);
+	}
+	.meet-katlynn__left {
+		background-color: $color-white;
+		background-image: url('/static/images/about/meet-katlynn-background.png');
+		background-position: top;
+		background-repeat: no-repeat;
+		background-size: cover;
+		width: 50%;
+		@media only screen and (max-width: $breakpoint-s) {
+			min-height: calc(80vh - 65px);
+			width: 100%;
+		}
+		@media only screen and (max-width: $breakpoint-xxs) {
+			display: none;
+		}
+	}
+	.meet-katlynn__right {
+		align-items: flex-start;
+		box-sizing: border-box;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 50px;
+		text-align: left;
+		width: 50%;
+		@media only screen and (max-width: $breakpoint-s) {
+			padding: 40px;
+			width: 100%;
+		}
+		@media only screen and (max-width: $breakpoint-xxs) {
+			padding: 20px;
+		}
+		h1 {
+			margin: 0 0 20px 0;
+		}
+		p {
+			font-size: $font-size-text;
+			color: $color-grey-dark;
+			margin: 0 0 20px 0;
+		}
+	}
+}
+
+.behind-the-scenes {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: center;
+	padding: 40px 0;
+	.behind-the-scenes__left {
+		box-sizing: border-box;
+		padding: 0 40px;
+		width: 60%;
+	}
+	.behind-the-scenes__right {
+		box-sizing: border-box;
+		width: 40%;
+		.behind-the-scenes__right__image-container {
+			position: relative;
+			height: 300px;
+			.behind-the-scenes__right__image-container__image {
+				height: auto;
+				overflow: hidden;
+				position: absolute;
+				width: auto;
+				img {
+					display: block;
+					vertical-align: middle;
+				}
+			}
+			.behind-the-scenes__right__image-container__slider {
+				background-color: red;
+				border-radius: 50%;
+				cursor: ew-resize;
+				height: 40px;
+				opacity: 0.7;
+				position: absolute;
+				width: 40px;
+				z-index: 9;
+			}
+		}
+	}
+}
