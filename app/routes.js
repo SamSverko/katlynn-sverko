@@ -52,8 +52,7 @@ router.get('/err', (req, res) => {
 router.get('*', (req, res) => {
 	console.log('GET request for 404.');
 
-	res.status(404)
-	.render('error-404', {
+	res.status(404).render('error-404', {
 		layout: 'main',
 		title: '404'
 	});
